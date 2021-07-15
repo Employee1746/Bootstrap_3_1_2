@@ -114,10 +114,8 @@
                                                 <input class="form-control" id="passwordNew" name="password" type="text"
                                                        th:field="*{password}"/>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="chosenRolesDelete"
-                                                       class="col-form-label"><strong>Role:</strong></label>
-                                            </div>
+                                            <label for="chosenRolesDelete"
+                                                   class="col-form-label"><strong>Role:</strong></label>
                                             <div class="form-group">
                                                 <select multiple class="form-control" id="chosenRoles"
                                                         name="chosenRoles" size="2">
@@ -177,35 +175,22 @@
                     <div class="row justify-content-center">
                         <div class="col-6 text-center">
                             <div class="modal-body">
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="id"><strong>Id:</strong></label>
-                                    <input class="form-control" id="id" name="id" type="text" readonly=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="username"><strong>Username:</strong></label>
-                                    <input class="form-control" id="username" name="username" type="text" value=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="surname"><strong>Surname:</strong>:</label>
-                                    <input class="form-control" id="surname" name="surname" type="text" value=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="email"><strong>Email:</strong></label>
-                                    <input class="form-control" id="email" name="email" type="text" value=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="password"><strong>Password:</strong>:</label>
-                                    <input class="form-control" id="password" name="password" type="text" value=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label for="updatedRoles" class="col-form-label"><strong>Role:</strong></label>
-                                </div>
-                                <div class="form-group text-center">
-                                    <select multiple class="form-control" id="updatedRoles" name="updatedRoles" size="2">
-                                        <option th:each="role : ${roles}" th:value="${role}" th:text="${role.getName().substring(5)}">role
-                                        </option>
-                                    </select>
-                                </div>
+                                <label class="col-form-label" for="id"><strong>Id:</strong></label>
+                                <input class="form-control" id="id" name="id" type="text" readonly=""/>
+                                <label class="col-form-label" for="username"><strong>Username:</strong></label>
+                                <input class="form-control" id="username" name="username" type="text" value=""/>
+                                <label class="col-form-label" for="surname"><strong>Surname:</strong>:</label>
+                                <input class="form-control" id="surname" name="surname" type="text" value=""/>
+                                <label class="col-form-label" for="email"><strong>Email:</strong></label>
+                                <input class="form-control" id="email" name="email" type="text" value=""/>
+                                <label class="col-form-label" for="password"><strong>Password:</strong>:</label>
+                                <input class="form-control" id="password" name="password" type="text" value=""/>
+                                <label for="updatedRoles" class="col-form-label"><strong>Role:</strong></label>
+                                <select multiple class="form-control" id="updatedRoles" name="updatedRoles" size="2">
+                                    <option th:each="role : ${roles}" th:value="${role}"
+                                            th:text="${role.getName().substring(5)}">role
+                                    </option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -238,37 +223,25 @@
                     <div class="row justify-content-center">
                         <div class="col-6 text-center">
                             <div class="modal-body">
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="id"><strong>Id:</strong></label>
-                                    <input class="form-control" id="idDelete" name="id" type="text" readonly=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="username"><strong>Username:</strong></label>
-                                    <input class="form-control" id="usernameDelete" name="username"
-                                           type="text"
-                                           readonly=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="surname"><strong>Surname:</strong></label>
-                                    <input class="form-control" id="surnameDelete" name="surname"
-                                           type="text" readonly=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label class="col-form-label" for="email"><strong>Email:</strong></label>
-                                    <input class="form-control" id="emailDelete" name="email" type="text"
-                                           readonly=""/>
-                                </div>
-                                <div class="form-group text-center">
-                                    <label for="chosenRolesDelete" class="col-form-label"><strong>Role:</strong></label>
-                                </div>
-                                <div class="form-group text-center">
-                                    <select disabled multiple class="form-control" id="chosenRolesDelete"
-                                            name="chosenRolesDelete" size="2">
-                                        <option th:each="role : ${roles}"
-                                                th:text="${role.getName().substring(5)}">
-                                        </option>
-                                    </select>
-                                </div>
+                                <label class="col-form-label" for="id"><strong>Id:</strong></label>
+                                <input class="form-control" id="idDelete" name="id" type="text" readonly=""/>
+                                <label class="col-form-label" for="username"><strong>Username:</strong></label>
+                                <input class="form-control" id="usernameDelete" name="username"
+                                       type="text"
+                                       readonly=""/>
+                                <label class="col-form-label" for="surname"><strong>Surname:</strong></label>
+                                <input class="form-control" id="surnameDelete" name="surname"
+                                       type="text" readonly=""/>
+                                <label class="col-form-label" for="email"><strong>Email:</strong></label>
+                                <input class="form-control" id="emailDelete" name="email" type="text"
+                                       readonly=""/>
+                                <label for="chosenRolesDelete" class="col-form-label"><strong>Role:</strong></label>
+                                <select disabled multiple class="form-control" id="chosenRolesDelete"
+                                        name="chosenRolesDelete" size="2">
+                                    <option th:each="role : ${roles}"
+                                            th:text="${role.getName().substring(5)}">
+                                    </option>
+                                </select>
                             </div>
                         </div>
                     </div>
